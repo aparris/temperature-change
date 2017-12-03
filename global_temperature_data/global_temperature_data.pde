@@ -2,7 +2,7 @@
 
 int g=0; //variable to change green value in background (constant throughout)
 int b=100; //variable to change blue value in background (constant throughout)
-float newTemp = 3; //set temperature goal for year 2117 between -2 and 3 C
+float newTemp = -1; //set temperature goal for year 2117 between -2 and 3 C
 
 int y =0; //to begin iteration through data
 int yearFuture = 2016; //first year we don't have the data for
@@ -32,7 +32,7 @@ if (y<136) {
 }
 
 else {
-  if (newTempColorStart<=newTempColor){
+  if (newTempColorStart>=newTempColor){ //note: <,> must be switched depending on whether the goal is greater than or less than the current avg
   newTempColorStart=newTempColorStart+((newTempColor-Starting)/102);
   background (newTempColorStart, 0, 100);
 //print (yearFuture);
